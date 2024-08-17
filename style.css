@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primaryColor:#306295
+}
+body{
+    background-color: var(--primaryColor);
+}
+.header{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.7rem;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content{
+    width: 40%;
+    background-color: white;
+}
+.contentHeading{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.line{
+    background-color: gray;
+    height: 1px;
+    width: 100%;
+}
+.mainValue{
+    display: flex;
+    
+}
+.mainValue1st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.temperature{
+    /* margin-top: 60px;
+    margin-left:20px; */
+    font-size: 60px;
+    color: black;
+    text-shadow: 2px 2px rgb(9, 9, 37);
+}
+.mainValue2nd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 12px;
+}
+.mainValue2nd>div{
+    padding: 4px;
+}
+.location>span{
+    color: rgb(71,71,71);
+}
+.region>span{
+    color: rgb(71, 71, 71);
+}
+.condition{
+    margin: 0px 40px; 
+}
+
+.extraValue{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    margin: 10px;
+}
+.value{
+    border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+}
+.first{
+    color: gray;
+}
+
+/* for mobile */
+
+@media only screen and (max-width: 450px) {
+    .mainValue{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetterblick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        Wetter Blick
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="contentHeading">
+                <span class="contentHeader">Current Weather</span>
+                <span class="time"></span>
+            </div>
+            <div class="line"></div>
+            <div class="mainValue">
+                <div class="mainValue1st">
+                    <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
+                    <div class="temperature"></div>
+                </div>
+                <div class="mainValue2nd">
+                    <div class="location">
+                        Location:<span class="locationvalue"></span>
+                    </div>
+                    <div class="region">
+                        Region:<span class="regionvalue">/span>
+                    </div>
+                    <div class="lastUpdate">
+                        Last Updated: <span class="lastupdate"></span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="condition">
+                
+                <div class="">
+                    Condition:<span class="conditionText"></span>
+                </div>
+            </div>
+            <div class="extraValue">
+                <div class="value">
+                    <span class="first">Feels Like</span><span class="second feelslike"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Pressure</span><span class="second pressure"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Wind Speed</span><span class="second windspeed"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Humidity</span><span class="second humidity"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Wind Direction</span><span class="second winddirection"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Cloud</span><span class="second cloud"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Visibility</span><span class="second visibility"></span>
+                </div>
+                <div class="value">
+                    <span class="first">Heat Index</span><span class="second heatindex"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
