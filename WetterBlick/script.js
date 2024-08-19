@@ -16,8 +16,8 @@ let lastupdate = document.querySelector(".lastupdate");
 let time = document.querySelector(".time");
 let condition = document.querySelector(".conditionText");
 let heatindex = document.querySelector(".heatindex");
-
-
+let searchbutton = document.querySelector(".get-weather")
+let search = document.querySelector("#city");
 function getCity(coordinates) { 
     return new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest(); 
@@ -80,6 +80,23 @@ function main() {
 
 
 main();
+search.addEventListener('keydown', function(event) {
+    // Check if the Enter key is pressed
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the default action (form submission)
+        searchbutton.click(); // Trigger the button's click event
+    }
+});
+searchbutton.addEventListener('click',async(e)=>{
+    e.preventDefault();
+    let city = search.value.trim();
+
+    if (city==="") {
+        alert("Please Enter a city name..");
+        return;
+    }
+    setValues(city);
+})
 async function setValues(city) {
 	if (city === "") {
         alert("Please Enter a city name..");
@@ -104,6 +121,50 @@ async function setValues(city) {
 	lastupdate.textContent = getWeather.current.last_updated;
 	condition.textContent = " "+getWeather.current.condition.text;
 	heatindex.textContent = getWeather.current.heatindex_c +"°C";
+
+
+    //background changes
+    let conditionText = getWeather.current.condition.text.toLowerCase();
+    
+    switch (true) {
+        case conditionText.includes("partly cloudy"):
+            body.style.backgroundImage = "url('./Images/partlycloud.png')";
+            break;
+        case conditionText.includes("sunny"):
+            body.style.backgroundImage = "url('./Images/sunny.png')";
+            break;
+        case conditionText.includes("cloudy"):
+            body.style.backgroundImage = "url('./Images/cloudy.png')";
+            break;
+        case conditionText.includes("light rain"):
+        case conditionText.includes("drizzle"):
+        case conditionText.includes("patchy rain nearby"):
+            body.style.backgroundImage = "url('./Images/lightrain.png')";
+            break;
+        case conditionText.includes("heavy rain"):
+            console.log("working");
+            
+            body.style.backgroundImage = "url('./Images/heavyRainy.png')";
+            break;
+        case conditionText.includes("thunderstorm"):
+            body.style.backgroundImage = "url('./Images/thunderstorm.png')";
+            break;
+        case conditionText.includes("snow"):
+            body.style.backgroundImage = "url('./Images/snow.png')";
+            break;
+        case conditionText.includes("fog"):
+            body.style.backgroundImage = "url('./Images/fog.png')";
+            break;
+        case conditionText.includes("windy"):
+            body.style.backgroundImage = "url('./Images/windy.png')";
+            break;
+        case conditionText.includes("hail"):
+            body.style.backgroundImage = "url('./Images/hail.png')";
+            break;
+        default:
+            body.style.backgroundImage = "";
+            break;
+    }
 }
 const fetchCurrentWeather = async (city)=>{
     try {
