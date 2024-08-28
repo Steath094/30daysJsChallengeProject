@@ -22,18 +22,27 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.navbar>ul{
+.hammenu{
+    display: flex;
+    backdrop-filter: blur(20px);
+    border-radius: 0px 0px  30px 30px;
+    /* border: 2px solid blue;   */
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+.hammenu>ul{
     display: flex;
 }
 
-.navbar>ul>li{
+.hammenu>ul>li{
     list-style: none;
     margin: 10px;
     font-size: 1.4rem;
     font-family:Arial, Helvetica, sans-serif;
     
 }
-.navbar>ul>li>a{
+.hammenu>ul>li>a{
     text-decoration: none;
     color: white;
     padding: 10px;
@@ -248,8 +257,50 @@ body{
 .setAndRise{
     font-size: 0.8rem;
 }
-/* for mobile */
+/* hamburger navbar  */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
 
+.hamburger svg {
+    fill: #e8eaed;
+}
+/* for mobile */
+@media only screen and (max-width: 650px) {
+    .container{
+        position: relative;
+        z-index: -1;
+    }
+    .hammenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        width: 88%;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1;
+    }
+    .hammenu>ul>li{
+        font-size: 1rem;
+    }
+
+    .hammenu.show {
+        display: flex;
+        z-index: 1;
+        
+    }
+
+    .hammenu li {
+        margin: 10px 0;
+    }
+    .hamburger {
+        display: block;
+    }
+}
 @media only screen and (max-width: 450px) {
     .mainValue{
         flex-direction: column;
@@ -273,10 +324,22 @@ body{
         width: 70%;
         padding: 5px;
     }
+    .undetailedInfo{
+
+    }
+    .tabTwo{
+        display: none;
+    }
 }
 @media only screen and  (min-width: 451px) and (max-width: 875px) {
     .dailySize{
         width: 100%;
+    }
+    .todaySize{
+        width: 100%;
+    }
+    .header {
+        font-size: 1.8rem;
     }
 }
 @media only screen and  (min-width: 875px) and (max-width: 1050px) {
@@ -286,9 +349,15 @@ body{
     .contentOverlay {
         width: 100%;
     }
+    .todaySize {
+        width: 60%;
+    }
 }
 @media only screen and  (min-width: 1051px) and (max-width: 1300px) {
     .dailySize{
         width: 75%;
+    }
+    .todaySize {
+        width: 50%;
     }
 }

@@ -16,28 +16,33 @@
         <div class="header">
             Wetter Blick
         </div>
-        <ul>
-            <li><a id="todayButton" href="#">Today</a></li>
-            <!-- <li><a href="#hourly-forecast">Hourly Forecast</a></li> -->
-            <li><a id="dailyButton" href="#">Daily Forecast</a></li>
-            <!-- <li><a href="#about-us">About Us</a></li> -->
-        </ul>
-        <div class="serachbox">
-            <input type="text"
-            id="city"
-            placeholder="Enter City Name"            
-            />
-            <div class="get-weather">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                    </span>
+        <div class="hammenu" ">
+            <ul>
+                <li><a id="todayButton" href="#">Today</a></li>
+                <!-- <li><a href="#hourly-forecast">Hourly Forecast</a></li> -->
+                <li><a id="dailyButton" href="#">Daily Forecast</a></li>
+                <!-- <li><a href="#about-us">About Us</a></li> -->
+            </ul>
+            <div class="serachbox">
+                <input type="text"
+                id="city"
+                placeholder="Enter City Name"            
+                />
+                <div class="get-weather">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                        </span>
+                </div>
             </div>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <img src="Images/hamburger.svg" alt="hamburger">
         </div>
     </nav>
     
     <div class="main today">
        
-        <div class="container">
+        <div class="container todaySize">
             <div class="content">
                 <div class="contentHeading">
                     <span class="contentHeader">Current Weather</span>
@@ -105,196 +110,6 @@
                     <div class="location"><span class="contentHeader">Daily Weather |</span><span class="locationvalueToday"></span></div>
                     <span class="timeDaily"></span>
                 </div>
-                <!-- <div class="line" style="margin-top: 20px;"></div>
-                <div class="component">
-                    <div class="undetailedInfo">
-                        <div class="tabOne">
-                            <span class="dateDaily">Today</span>
-                            <span class="temptoday"><span class="todayCurrrentTemp highesttemptoday">30</span>/<span class="lowesttemptoday">26</span></span>
-                            <span class="conditiontoday"><img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather"><span>Showers</span></span>
-                        </div>
-                        <div class="tabTwo">
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                humidity_percentage
-                                </span> <span>40%</span></span>
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                air
-                                </span> 4.5km/h</span>
-                            <span class="material-symbols-outlined" style="font-size:30px;">
-                                keyboard_arrow_up
-                                </span>
-                        </div>
-                    </div>
-                    <div class="detailedInfo" style="display: none;">
-                        <div class="arrowDown"><span class="material-symbols-outlined" style="font-size:30px;">
-                            keyboard_arrow_up
-                            </span></div>
-                        <div class="cardContainer">
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">Sun Set: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">SunSet: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="line" style="margin-top: 20px;"></div>
-                <div class="component">
-                    <div class="undetailedInfo">
-                        <div class="tabOne">
-                            <span class="dateDaily">Today</span>
-                            <span class="temptoday"><span class="todayCurrrentTemp highesttemptoday">30</span>/<span class="lowesttemptoday">26</span></span>
-                            <span class="conditiontoday"><img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather"><span>Showers</span></span>
-                        </div>
-                        <div class="tabTwo">
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                humidity_percentage
-                                </span> <span>40%</span></span>
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                air
-                                </span> 4.5km/h</span>
-                            <span class="material-symbols-outlined" style="font-size:30px;">
-                                keyboard_arrow_up
-                                </span>
-                        </div>
-                    </div>
-                    <div class="detailedInfo" style="display: none;">
-                        <div class="arrowDown"><span class="material-symbols-outlined" style="font-size:30px;">
-                            keyboard_arrow_up
-                            </span></div>
-                        <div class="cardContainer">
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">Sun Set: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">SunSet: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="line" style="margin-top: 20px;"></div>
-                <div class="component">
-                    <div class="undetailedInfo">
-                        <div class="tabOne">
-                            <span class="dateDaily">Today</span>
-                            <span class="temptoday"><span class="todayCurrrentTemp highesttemptoday">30</span>/<span class="lowesttemptoday">26</span></span>
-                            <span class="conditiontoday"><img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather"><span>Showers</span></span>
-                        </div>
-                        <div class="tabTwo">
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                humidity_percentage
-                                </span> <span>40%</span></span>
-                            <span><span class="material-symbols-outlined" style="font-size: unset;">
-                                air
-                                </span> 4.5km/h</span>
-                            <span class="material-symbols-outlined" style="font-size:30px;">
-                                keyboard_arrow_up
-                                </span>
-                        </div>
-                    </div>
-                    <div class="detailedInfo" style="display: none;">
-                        <div class="arrowDown"><span class="material-symbols-outlined" style="font-size:30px;">
-                            keyboard_arrow_up
-                            </span></div>
-                        <div class="cardContainer">
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">Sun Set: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="dayTime">WED 20 | Day</div>
-                                <div class="tempdetails">
-                                    <div class="tempdetailed">
-                                            <img class="weather-img" src="https://cdn.weatherapi.com/weather/64x64/night/389.png" alt="Weather">
-                                            <div class="temperature3rdday">27 'c</div>
-                                    </div>
-                                    <div class="setAndRise">
-                                        <div class="sunrise">Sun Rise: 5:00</div>
-                                        <div class="sunset">SunSet: 5:00</div>
-                                    </div>
-                                
-                                </div>
-                                <div class="conditiondetailed">
-                                    Mist
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-                 -->
             </div>
         </div>
     </div>

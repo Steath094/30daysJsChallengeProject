@@ -85,7 +85,7 @@ function main() {
 	}
 	function error(err) { 
 		console.warn(`ERROR(${err.code}): ${err.message}`); 
-	} 
+	}
 }
 
 
@@ -93,6 +93,19 @@ function main() {
 
 
 main();
+let close = false;
+document.querySelector('.hamburger').addEventListener('click', function() {
+    const menu = document.querySelector('.hammenu');
+    // console.log(menu);
+    menu.classList.toggle('show');
+    if(!close){
+        close =true;
+        document.querySelector('.hamburger').children[0].src="Images/close.svg"
+    }else{
+        close = false;
+        document.querySelector('.hamburger').children[0].src="Images/hamburger.svg"
+    }
+});
 
 
 search.addEventListener('keydown', function(event) {
@@ -210,8 +223,12 @@ async function set3daysValue(city,days=3) {
     }
     //setting and selecting div value for daily weather
     let components = document.querySelectorAll(".component")
-    // console.log(components);
-
+    console.log(components);
+    // if (!close) {
+    //     let cont = document.querySelector(".container")
+    //     cont.style.position="static"
+    //     cont.style.zIndex="unset"
+    // }
     // css 
     components.forEach((component)=>{
         let showing = false;
@@ -223,14 +240,14 @@ async function set3daysValue(city,days=3) {
             undetailedCard.style.display='none';
             detailedCard.style.display="block"
             showing = true;
-            // console.log("shoiwng");
+            console.log("shoiwng");
             return;
         }
         if(showing){
             undetailedCard.style.display='flex';
             detailedCard.style.display="none"
             showing = false;
-            // console.log("hiding");
+            console.log("hiding");
             return;
         }
         console.log("clicking", showing);
