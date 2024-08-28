@@ -87,11 +87,6 @@ function main() {
 		console.warn(`ERROR(${err.code}): ${err.message}`); 
 	}
 }
-
-
-
-
-
 main();
 let close = false;
 document.querySelector('.hamburger').addEventListener('click', function() {
