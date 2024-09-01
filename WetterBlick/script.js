@@ -88,19 +88,6 @@ function main() {
 	}
 }
 main();
-let close = false;
-document.querySelector('.hamburger').addEventListener('click', function() {
-    const menu = document.querySelector('.hammenu');
-    // console.log(menu);
-    menu.classList.toggle('show');
-    if(!close){
-        close =true;
-        document.querySelector('.hamburger').children[0].src="Images/close.svg"
-    }else{
-        close = false;
-        document.querySelector('.hamburger').children[0].src="Images/hamburger.svg"
-    }
-});
 
 
 search.addEventListener('keydown', function(event) {
@@ -230,17 +217,22 @@ async function set3daysValue(city,days=3) {
     component.addEventListener("click",()=>{
         let undetailedCard = component.querySelector('.undetailedInfo')
         let detailedCard = component.querySelector('.detailedInfo')
+        let arrow = component.querySelector('.arrowDown')
+        let icon = arrow.querySelector('.material-symbols-outlined')
         
         if(!showing){
             undetailedCard.style.display='none';
             detailedCard.style.display="block"
+            icon.classList.toggle('rotate');
             showing = true;
             console.log("shoiwng");
             return;
         }
+        
         if(showing){
             undetailedCard.style.display='flex';
             detailedCard.style.display="none"
+            icon.textContent="keyboard_arrow_up"
             showing = false;
             console.log("hiding");
             return;
