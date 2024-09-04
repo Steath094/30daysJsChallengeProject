@@ -312,7 +312,9 @@ body{
     .cardContainer>.card{
         width: unset;
     }
-    
+    .temperature3rdday{
+        font-size: 30px;
+    }
 
 }
 @media only screen and  (min-width: 451px) and (max-width: 875px) {
