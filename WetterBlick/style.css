@@ -285,11 +285,19 @@ body{
         width: 70%;
         padding: 5px;
     }
-    /* .undetailedInfo{
-
-    } */
+    .component{
+        margin: unset;
+        padding: 5px;
+    }
+    .undetailedInfo{
+        margin: unset;
+        font-size: 13px;
+    }
     .tabTwo{
         display: none;
+    }
+    .temptoday{
+        font-size: 1.1rem;
     }
     .navbar{
         flex-direction: column;
@@ -297,6 +305,12 @@ body{
     .hammenu{
         flex-direction: column;
         width: 90%;
+    }
+    .cardContainer{
+        flex-direction: column;
+    }
+    .cardContainer>.card{
+        width: unset;
     }
     
 
