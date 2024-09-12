@@ -70,7 +70,6 @@ function main() {
         document.getElementById('task-title').value = taskTitle;
         document.getElementById('task-description').value = taskDescription;
         document.getElementById('date').value = taskDate;
-
         // Remove the task from the DOM and local storage
         taskItem.remove();
         saveTasks();  // Save changes to local storage
