@@ -206,3 +206,73 @@ input:focus {
     font-size: 14px;
   }
 }
+
+/* //save button  */
+/* Style the task item */
+.task-item {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Style the edit form */
+.task-item.edit-mode {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Style the form fields */
+.task-item.edit-mode input[type="text"],
+.task-item.edit-mode textarea,
+.task-item.edit-mode input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the save button */
+.task-item.edit-mode button[type="button"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the save button on hover */
+.task-item.edit-mode button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the task details */
+.task-item .task-name,
+.task-item .task-desc,
+.task-item .task-date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style the task name */
+.task-item .task-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Style the task description */
+.task-item .task-desc {
+  font-size: 16px;
+}
+
+/* Style the task date */
+.task-item .task-date {
+  font-size: 14px;
+  color: #666;
+}
