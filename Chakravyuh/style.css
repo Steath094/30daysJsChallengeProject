@@ -276,3 +276,72 @@ input:focus {
   font-size: 14px;
   color: #666;
 }
+
+/* Style the item after triggering edit button */
+.task-info{
+  margin: 0px 10px;
+}
+/* Title input styling */
+#editTitle {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Description textarea styling */
+#editDescription {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical; /* Allowing vertical resize */
+}
+
+/* Date input styling */
+#editDate {
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Save button styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  #editTitle, #editDescription, #editDate {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
