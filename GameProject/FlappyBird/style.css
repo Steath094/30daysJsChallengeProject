@@ -11,6 +11,12 @@ body{
     /* background-color: skyblue; */
     background-image: url(Images/flappybirdbg.png);
 }
+@font-face {
+    font-family: 'MyCustomFont'; /* Name of your font */
+    src: url('fonts/sp.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal; /* Optional: specify the weight */
+    font-style: normal;  /* Optional: specify the style */
+}
 /* Hide the game-over screen initially */
 #gameOverScreen {
     display: none;
@@ -27,7 +33,7 @@ body{
     padding: 20px;
     text-align: center;
     width: 300px;
-    font-family: 'Press Start 2P', cursive; /* Retro font, you can include this font from Google Fonts */
+    font-family: 'MyCustomFont', cursive; /* Retro font, you can include this font from Google Fonts */
     color: #fff;
     box-shadow: 0 0 20px #3aff00;
     z-index: 100;
@@ -51,7 +57,7 @@ body{
     border: none;
     color: #000;
     cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'MyCustomFont', cursive;
   }
   
   .game-over-screen button:hover {
