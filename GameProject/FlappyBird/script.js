@@ -107,7 +107,7 @@ function update() {
         }
     }
     while (pipeArray.length>0 && pipeArray[0].x+pipeArray[0].width<0) {
-        console.log(pipeArray);
+        // console.log(pipeArray);
         
         pipeArray.shift() // removes first element from the array
     }
@@ -116,9 +116,9 @@ function update() {
     context.font = "45px sans-serif";
     context.fillText(`Score: ${score}`,5,45);
 
-    if (gameOver) {
-        context.fillText("Game Over",5,90)
-    }
+    // if (gameOver) {
+    //     context.fillText("Game Over",5,90)
+    // }
 }
 function placePipes(){
     if (gameOver) {
@@ -146,7 +146,7 @@ function placePipes(){
     pipeArray.push(bottomPipe);
 }
 function moveBird(e){
-    console.log(e.type);
+    // console.log(e.type);
     
     if (e.code =='Space' || e.code =='ArrowUp' || e.type =='click') {
         velocityY = -6;
