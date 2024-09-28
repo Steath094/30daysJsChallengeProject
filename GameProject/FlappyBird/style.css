@@ -11,3 +11,51 @@ body{
     /* background-color: skyblue; */
     background-image: url(Images/flappybirdbg.png);
 }
+/* Hide the game-over screen initially */
+#gameOverScreen {
+    display: none;
+  }
+  
+  /* Retro themed styles */
+  .game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border: 5px solid #3aff00; /* Neon green border */
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    font-family: 'Press Start 2P', cursive; /* Retro font, you can include this font from Google Fonts */
+    color: #fff;
+    box-shadow: 0 0 20px #3aff00;
+    z-index: 100;
+  }
+  
+  .game-over-screen h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff0000; /* Bright red for a retro look */
+  }
+  
+  .game-over-screen p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .game-over-screen button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #3aff00;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .game-over-screen button:hover {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  

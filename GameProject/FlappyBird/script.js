@@ -40,10 +40,10 @@ let bottomPipeImg;
 //physics
 let velocityX = -2;
 let velocityY = 0; //bird jump speed
-let gravity = 0.4;
+let gravity = 0.3;
 
 
-let gameOver = false;
+let gameOver = true;
 let score = 0;
 
 window.onload = function() {
@@ -69,7 +69,7 @@ window.onload = function() {
 
     bottomPipeImg = new Image();
     bottomPipeImg.src = "Images/bottompipe.png";
-
+    
     requestAnimationFrame(update)
     setInterval(placePipes,1500);
     document.addEventListener("keydown",moveBird);
@@ -102,6 +102,8 @@ function update() {
         }
         if(detectCollison(bird,pipe)){
             gameOver = true;
+            document.getElementById('finalScore').innerText = score;
+            document.getElementById('gameOverScreen').style.display = 'block';
         }
     }
     while (pipeArray.length>0 && pipeArray[0].x+pipeArray[0].width<0) {
@@ -112,7 +114,7 @@ function update() {
     //score
     context.fillstyle = "white";
     context.font = "45px sans-serif";
-    context.fillText(score,5,45);
+    context.fillText(`Score: ${score}`,5,45);
 
     if (gameOver) {
         context.fillText("Game Over",5,90)
@@ -153,6 +155,8 @@ function moveBird(e){
             pipeArray = [];
             score = 0;
             gameOver = false;
+            document.getElementById('gameOverScreen').style.display = 'none';
+
         }
     }
 }
@@ -162,4 +166,8 @@ function detectCollison(a,b){
      a.x+a.width>b.x &&
      a.y<b.y+b.height &&
      a.y + a.height>b.y;
+}  
+function retryGame() {
+    document.getElementById('gameOverScreen').style.display = 'none';
 }
+  
