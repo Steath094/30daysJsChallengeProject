@@ -40,7 +40,7 @@ let bottomPipeImg;
 //physics
 let velocityX = -2;
 let velocityY = 0; //bird jump speed
-let gravity = 0.3;
+let gravity = 0.4;
 
 
 let gameOver = true;
@@ -170,4 +170,5 @@ function detectCollison(a,b){
 function retryGame() {
     document.getElementById('gameOverScreen').style.display = 'none';
 }
+
   
